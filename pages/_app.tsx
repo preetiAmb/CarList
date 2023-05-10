@@ -12,7 +12,7 @@ import "../public/css/styles.css";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 

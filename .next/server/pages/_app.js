@@ -46,7 +46,7 @@ var CarContext = __webpack_require__(7945);
 
 const darkTheme = (0,styles_namespaceObject.createTheme)({
     palette: {
-        mode: "dark"
+        mode: "light"
     }
 });
 function HomePage({ Component , pageProps  }) {

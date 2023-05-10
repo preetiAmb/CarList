@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 import { CarList } from "../src/components/CarList";
-import { Car } from '../types';
-import { CarContext } from '../src/components/CarContext';
+import { CarContext } from "../src/components/CarContext";
 
 const CarPage: React.FC = () => {
   const { cars } = React.useContext(CarContext);

@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { CarContext } from "./CarContext";
-
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
+import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/system";
+import Link from "next/link";
 
 const LearnInfo: React.FC = () => {
   const { cars } = useContext(CarContext);
@@ -21,44 +19,65 @@ const LearnInfo: React.FC = () => {
   const { bodyType, imageUrl, modelName, modelType } = car || {};
 
   return car ? (
-    <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} md={4} key={car.id}>
-        <Card
+    <Grid container justifyContent="center">
+      <Grid
+        item
+        xs={12}
+        md={8}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "40vh",
+          width: "800px",
+          margin: "auto",
+        }}
+      >
+        <Typography variant="h3" component="h1">
+          {modelName}
+        </Typography>
+
+        <Box sx={{ flexGrow: 1 }} />
+
+        <Box
           sx={{
-            maxWidth: 345,
-            height: "100%",
+            minWidth: "260px",
+            maxWidth: "100%",
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <CardMedia
-            component="img"
-            height="auto"
-            image={imageUrl}
+          <Image
+            src={imageUrl || ""}
             alt={modelName}
+            width={400}
+            height={300}
           />
-          <CardContent sx={{ flexGrow: 1 }}>
-            <Typography gutterBottom variant="h5" component="div">
-              {modelName}
-            </Typography>
-            <Typography
-              gutterBottom
-              variant="subtitle1"
-              component="div"
-              style={{ color: "grey" }}
-            >
-              {modelType}
-            </Typography>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              style={{ lineHeight: "1.5em" }}
-            >
-              {bodyType}
-            </Typography>
-          </CardContent>
-        </Card>
+        </Box>
+
+        <Typography
+          variant="h4"
+          component="h2"
+          sx={{ textTransform: "uppercase" }}
+        >
+          {modelType}
+        </Typography>
+
+        <Typography
+          variant="h5"
+          component="h3"
+          sx={{ textTransform: "uppercase" }}
+        >
+          {bodyType}
+        </Typography>
+
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ mr: 2 }}>
+            <Link href={`/shop/${car.id}`}>Buy</Link>
+          </Box>
+        </Box>
       </Grid>
     </Grid>
   ) : null;
