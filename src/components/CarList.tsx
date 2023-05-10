@@ -80,12 +80,33 @@ export const CarList: React.FC<CarListProps> = ({ cars }) => {
         ))}
       </Slider>
       {!isMobile && (
-        <Box display="flex" justifyContent="center">
-          <Button className="button-nav" onClick={handleBack}>
-            <ChevronLeft />
+        <Box display="flex" justifyContent="flex-end">
+          <Button
+            className="button-nav"
+            onClick={handleBack}
+            sx={{
+              backgroundColor: "white",
+              border: "1px solid black",
+              borderRadius: "50%",
+              marginTop: 2,
+              width: "20px", 
+            }}
+          >
+            <ChevronLeft sx={{ color: "black", fontSize: 28 }} />
           </Button>
-          <Button className="button-nav" onClick={handleNext}>
-            <ChevronRight />
+          <Button
+            className="button-nav"
+            onClick={handleNext}
+            sx={{
+              backgroundColor: "white",
+              border: "1px solid black",
+              borderRadius: "50%",
+              marginLeft: 2,
+              marginTop: 2,
+              width: "20px", 
+            }}
+          >
+            <ChevronRight sx={{ color: "black", fontSize: 28 }} />
           </Button>
         </Box>
       )}

@@ -1,4 +1,3 @@
-import { HelloWorld } from "../src/components/HelloWorld";
 import "../public/css/styles.css";
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";

@@ -6,7 +6,7 @@ const CarPage: React.FC = () => {
   const { cars } = React.useContext(CarContext);
 
   return (
-    <>
+    <> 
       <CarList cars={cars} />
     </>
   );
