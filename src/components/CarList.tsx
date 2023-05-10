@@ -80,6 +80,7 @@ export const CarList: React.FC<CarCarouselProps> = ({ cars }) => {
           <Button
             className="button-nav"
             onClick={handleBack}
+            aria-label="Previous"
             sx={{
               backgroundColor: "white",
               border: "1px solid black",
@@ -93,6 +94,7 @@ export const CarList: React.FC<CarCarouselProps> = ({ cars }) => {
           <Button
             className="button-nav"
             onClick={handleNext}
+            aria-label="Next"
             sx={{
               backgroundColor: "white",
               border: "1px solid black",

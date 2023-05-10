@@ -75,7 +75,7 @@ const LearnInfo: React.FC = () => {
 
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box sx={{ mr: 2 }}>
-            <Link href={`/shop/${car.id}`}>Buy</Link>
+            <Link href={`/shop/${car.id}`} aria-label="Buy this car">Buy</Link>
           </Box>
         </Box>
       </Grid>

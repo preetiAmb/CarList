@@ -63,7 +63,7 @@ const ShopInfo: React.FC = () => {
               </Box>
             </Grid>
             <Grid item>
-              <Button onClick={getAmount}>Buy for ${getAmount()}</Button>
+              <Button onClick={getAmount} aria-label="Buy button">Buy for ${getAmount()}</Button>
             </Grid>
           </Grid>
         </Box>

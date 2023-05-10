@@ -55,7 +55,7 @@ export const CarCard: React.FC<CarProps> = ({ car }) => {
           <CardActions>
             <Grid container justifyContent="center">
               <Grid item>
-                <Link href={`./learn/${car.id}`} underline="none">
+                <Link href={`./learn/${car.id}`} underline="none" aria-label="Learn more about this car">
                   <Typography variant="subtitle1">
                     Learn
                     <IconButton
@@ -70,7 +70,7 @@ export const CarCard: React.FC<CarProps> = ({ car }) => {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href={`./shop/${car.id}`} underline="none">
+                <Link href={`./shop/${car.id}`} underline="none" aria-label="Shop this car">
                   <Typography variant="subtitle1">
                     Shop
                     <IconButton
