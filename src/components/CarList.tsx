@@ -2,17 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { Car } from "../../types";
 import { Grid, Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import { CarCard } from "./CarCard";
-import { MobileStepper } from "@mui/material";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
+import { CarCarouselProps } from '../../types';
 
-type CarListProps = {
-  cars: Car[];
-};
-
-export const CarList: React.FC<CarListProps> = ({ cars }) => {
+export const CarList: React.FC<CarCarouselProps> = ({ cars }) => {
   const customSlider = useRef<Slider>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));

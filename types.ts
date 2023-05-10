@@ -14,22 +14,4 @@ export interface CarCarouselProps {
 
 export type CarProviderProps = {
   children: ReactNode;
-};
-
-
-
-export interface CarouselProps {
-  children?: ReactNode;
-  autoPlay?: boolean;
-  animation?: 'slide' | 'fade';
-  indicators?: boolean;
-  navButtonsProps?: {
-    PrevButtonComponent?: React.ComponentType<{ onClick: () => void }>;
-    NextButtonComponent?: React.ComponentType<{ onClick: () => void }>;
-  };
 }
-
-export type CustomArrowButtonProps = {
-  direction: 'left' | 'right';
-  onClick: () => void;
-};

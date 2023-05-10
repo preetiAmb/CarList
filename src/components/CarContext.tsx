@@ -1,21 +1,6 @@
-import React, { ReactNode, createContext } from 'react';
+import React, { createContext } from 'react';
 import cars from '../../public/api/cars.json';
-
-interface Car {
-  id: string;
-  modelName: string;
-  bodyType: string;
-  modelType: string;
-  imageUrl: string;
-}
-
-export interface CarCarouselProps {
-  cars: Car[];
-}
-
-export type CarProviderProps = {
-  children: ReactNode;
-};
+import { CarCarouselProps, CarProviderProps } from '../../types'
 
 export const CarContext = createContext<CarCarouselProps>({ cars });
 
